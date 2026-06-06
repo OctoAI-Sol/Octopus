@@ -1,0 +1,59 @@
+name: Suggestion
+description: Suggest a new feature or improvement for OctopusAI
+title: "[Suggestion]: "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Got an idea to make OctopusAI better?
+        We love community input. Tell us what you're thinking.
+
+  - type: input
+    id: telegram
+    attributes:
+      label: Telegram username
+      description: Your @handle so we can follow up if needed
+      placeholder: "@yourusername"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: What area is this suggestion for?
+      options:
+        - Telegram bot
+        - Mining / Staking
+        - Tokenomics
+        - Website
+        - Community / Marketing
+        - New feature
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Your suggestion
+      description: Describe your idea in detail. What problem does it solve? How would it work?
+      placeholder: I think it would be great if...
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Why would this help?
+      description: How does this benefit the OctopusAI community, holders, or the project?
+      placeholder: This would help because...
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Mockups / Screenshots (optional)
+      description: Drag and drop any images, mockups, or references here
+      placeholder: Drop images here
+    validations:
+      required: false
