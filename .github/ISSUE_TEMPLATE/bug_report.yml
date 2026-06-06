@@ -1,0 +1,66 @@
+name: Support Ticket
+description: Report a bug or issue with OctopusAI
+title: "[Ticket]: "
+labels: ["support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thanks for reaching out to the OctopusAI team
+        Please fill in the details below so we can help you faster.
+
+  - type: input
+    id: telegram
+    attributes:
+      label: Telegram username
+      description: Your @handle so we can follow up with you
+      placeholder: "@yourusername"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: What is this about?
+      options:
+        - Telegram bot
+        - Mining / Staking
+        - Buying $OCTOAI
+        - Wallet / Transaction
+        - Website
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the issue in detail
+      description: What happened? What did you expect to happen? Include any error messages.
+      placeholder: Tell us what went wrong...
+    validations:
+      required: true
+
+  - type: input
+    id: wallet
+    attributes:
+      label: Wallet address (optional)
+      description: If relevant — e.g. mining, staking, or transaction issues
+      placeholder: "Your Solana wallet address"
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag and drop images here, or paste them. Attach as many as needed.
+      placeholder: Drop screenshots here
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirm
+      options:
+        - label: I have searched existing issues and this hasn't been reported
+          required: true
